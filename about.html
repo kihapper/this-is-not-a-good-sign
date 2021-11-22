@@ -43,6 +43,21 @@
       </p>
     </div>
 
+    <div id="slideshow-example" data-component="slideshow">
+      <div role="list">
+        <div class="slide">
+          <img class="image_slide" src="./pictures/notgoodsign.JPG" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./pictures/sky.JPG" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./pictures/birds.JPG" alt="">
+        </div>
+      </div>
+    </div>
+
+
     <br>
     <h1>How to play</h1>
 
@@ -97,35 +112,28 @@
     <script src="/script.js" defer></script>
     </div>
   </body>
-
   <script type="text/javascript">
-    let current_browser = returnBrowserName();
 
-    let os_name = bowser_result.parsedResult.os.name;
-    let os_version = bowser_result.parsedResult.os.version;
-    let browser_name = bowser_result.parsedResult.browser.name;
-
-    let runtime_name =
-      "Your device is running " +
-      browser_name +
-      " on " +
-      os_name +
-      " " +
-      os_version;
-    console.log(runtime_name);
-
-    const answerElement = document.querySelector("#answer");
-    const isEnabled = detectiOSARQuickLook();
-
-    if (!isEnabled) {
-      hideAppleAR();
+    var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+    slideshows.forEach(initSlideShow);
+    
+    function initSlideShow(slideshow) {
+    
+      var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
+    
+      var index = 0, time = 3000;
+      slides[index].classList.add('active');
+    
+      setInterval( () => {
+        slides[index].classList.remove('active');
+        
+        index++;
+        if (index === slides.length) index = 0;
+    
+        slides[index].classList.add('active');
+    
+      }, time);
     }
-
-    console.log(isEnabled);
-    answerElement.innerHTML = isEnabled
-      ? runtime_name + " which supports Apple AR"
-      : "🚫 " + runtime_name +
-        " which does not support Apple AR (only works on iPhone with iOS 13 above). Please use Styly AR instead.";
-    answerElement.style.color = isEnabled ? "white" : "white";
-  </script>
+    
+      </script>
 </html>
