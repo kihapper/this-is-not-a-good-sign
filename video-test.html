@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QL IOS TEST</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>
+      Testing if videos work (nope, they all fail except the first):
+    </h1>
+
+    <span>Video with an MP4 source as child after empty image:</span>
+    <a
+      href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz"
+      rel="ar"
+    >
+      <img />
+      <video muted="true" autoplay="true" loop="true">
+        <source
+          src="https://media.giphy.com/media/cmfgfRB6lKZ39DUJFA/giphy.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </a>
+
+    <span>Video with an MP4 source as first child:</span>
+    <a
+      href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz"
+      rel="ar"
+    >
+      <video muted="true" autoplay="true" loop="true">
+        <source
+          src="https://media.giphy.com/media/cmfgfRB6lKZ39DUJFA/giphy.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </a>
+
+    <hr />
+
+    <a
+      href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz"
+      rel="ar"
+    >
+      <span>Video with an MP4 source as second child:</span>
+      <video muted="true" autoplay="true" loop="true">
+        <source
+          src="https://media.giphy.com/media/cmfgfRB6lKZ39DUJFA/giphy.mp4"
+          type="video/mp4"
+        />
+      </video>
+    </a>
+
+    <hr />
+
+    <span>Video with an MP4 source as first child, no source though:</span>
+    <a
+      href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz"
+      rel="ar"
+    >
+      <video height="1px" width="1px"></video>
+    </a>
+
+    <hr />
+
+    <a
+      href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz"
+      rel="ar"
+    >
+      <video muted="true" autoplay="true" loop="true">
+        <source
+          src="http://dl5.webmfiles.org/big-buck-bunny_trailer.webm"
+          type="video/webm"
+        />
+      </video>
+      <span>Video with a WebM source as first child.</span>
+    </a>
+  </body>
+</html>

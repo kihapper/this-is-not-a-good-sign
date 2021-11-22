@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@300&display=swap');
+
+@font-face {
+  font-family: 'Karla', sans-serif;
+}
+
+body {
+  background-color: #A0A0A0;
+  color: white;
+  font-family: 'Karla', sans-serif;
+}
+
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #A0A0A0;
+  border-top: 4px solid white;
+  color: white;
+  text-align: center;
+}
+
+.footer_menu {
+  font-size: 30px;
+  padding: 20px;
+}
+
+.footer_menu.right {
+  margin-right: 30px;
+}
+
+.footer_menu.left {
+  margin-left: 30px;
+}
+
+#top,
+#bottom,
+#left,
+#right {
+  background: white;
+  z-index: 5;
+  position: fixed;
+}
+#left,
+#right {
+  top: 0;
+  bottom: 0;
+  width: 4px;
+}
+#left {
+  left: 0;
+}
+#right {
+  right: 0;
+}
+
+#top,
+#bottom {
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+#top {
+  top: 0;
+}
+#bottom {
+  bottom: 0;
+}
+
+#main_section {
+  position: relative;
+  width: 80%;
+  padding: 20px;
+  margin: auto;
+  align-self: center;
+}
+
+#logo {
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  font-size: 30px;
+  line-height: 88.8%;
+  letter-spacing: -0.05em;
+  z-index:3;
+}
+
+#instagram {
+  position: absolute;
+  font-size: 25px;
+  top: 40px;
+  right: 40px;
+  z-index:3;
+}
+
+.main_text {
+  margin-top: 20px;
+  margin-bottom: 40px;
+
+  font-size: 18px;
+  line-height: 168.8%;
+}
+
+#answer {
+  color: white;
+  font-family: "WorldColliderRegular", sans-serif;
+  line-height: 25px;
+  padding-bottom: 20px;
+  margin-top: 130px;
+}
+
+a {
+  color: aliceblue;
+  text-decoration: none;
+}
+
+.section_building {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.main_container {
+  display: flex;
+  max-width: 400px;
+  flex-direction: column;
+  border: 2px solid white;
+  margin-bottom: 30px;
+  margin-left: 0.5vw;
+  margin-right: 0.5vw;
+}
+.thumbnail {
+  width: 100%;
+}
+.main_title {
+  border-top: 2px solid white;
+  border-bottom: 2px solid white;
+  font-size: 24px;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+.AR_option_box {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 19px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+.middleborder {
+  border-right: 2px solid white;
+  padding-top: -10px;
+  padding-bottom: -10px;
+}
+.AppleAR {
+  padding: 3px;
+}
+
+button {
+  font-family: "WorldColliderRegular", sans-serif;
+  background-color: #a9a9a9;
+  text-align: center;
+  padding: 0 5%;
+}
+
+button {
+  display: inline-block;
+  font-size: 2rem;
+  background-color: black;
+  border-radius: 8px;
+  border: none;
+}
+
+tr {
+  outline: 2px solid black;
+}
+
+video {
+  max-width: 50vw;
+}
+
+model-viewer {
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 40vh;
+}
+
+#center_photo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 220px;
+  width: 450px;
+
+}
+
+@media only screen and (max-width: 600px) {
+  #center_photo {
+    margin-top: 110px;
+    width: 90%;
+  }
+
+  #logo {
+    font-size: 25px;
+  }
+
+  .footer_menu {
+    font-size: 24px;
+  }
+}
