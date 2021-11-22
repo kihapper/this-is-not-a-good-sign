@@ -32,27 +32,64 @@
   </head>
 
   <body>
-    <div id="logo">
+    <!-- <div id="logo">
       <a href="./index.html">
         THIS IS NOT <br />
         A GOOD SIGN
       </a>
-    </div>
+    </div> -->
 
-    <div id="instagram">
+    <!-- <div id="instagram">
       <a href="https://instagram.com/thisisnotagoodsign_" target="_blank">
         <img
           width="35px"
-          src="https://cdn.glitch.com/12e8d23e-5a09-41e4-8be1-39d7a1f7d631%2Fwhite-instagram-icon.png?v=1605305393668"
+          src="./thumbnail/instagram-01.svg"
         />
       </a>
-    </div>
+    </div> -->
 
-    <img
+    <!-- <img
       id="center_photo"
       src="./thumbnail/sign-_0000s_0000_not_good_sign.png"
       alt="AR_photo"
-    />
+    /> -->
+    <div id="title_text">THIS IS NOT <br> A GOOD SIGN</div>
+    <p id="title_description">AR poetry project by <br> <a href="https://luckysoap.com/">J. R. Carpenter</a> & <a href="https://tomokihara.com">Tomo Kihara</a> </p>
+
+    <div id="slideshow-example" data-component="slideshow">
+      <div role="list">
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0000s_0000_not_good_sign.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0000s_0002_skyblue.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0005_dropss.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0000s_0001_rain.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0003_glaciers.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0006_birds.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0002_leaves.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0000_warm_days.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0001_sky_breaks.png" alt="">
+        </div>
+        <div class="slide">
+          <img class="image_slide" src="./thumbnail/sign-_0004_fire.png" alt="">
+        </div>
+      </div>
+    </div>
 
     <div class="---------------------------">
       <div id="left"></div>
@@ -62,42 +99,41 @@
     </div>
 
     <div class="footer">
-      <a class="footer_menu left" href="./about.html">About</a>
-      <a class="footer_menu right" href="./ar.html">Start AR →</a>
+      <a class="footer_menu left" href="./about.html">about</a>
+      <a class="footer_menu center" href="./ar.html">start AR</a>
+      <a class="footer_menu insta" href="https://instagram.com/thisisnotagoodsign_" target="_blank">
+        <img
+          width="25px"
+          src="./thumbnail/instagram-01.svg"
+        />
+      </a>    
     </div>
 
     <script src="/script.js" defer></script>
   </body>
 
   <script type="text/javascript">
-    let current_browser = returnBrowserName();
 
-    let os_name = bowser_result.parsedResult.os.name;
-    let os_version = bowser_result.parsedResult.os.version;
-    let browser_name = bowser_result.parsedResult.browser.name;
+var slideshows = document.querySelectorAll('[data-component="slideshow"]');
+slideshows.forEach(initSlideShow);
 
-    let runtime_name =
-      "Your device is running " +
-      browser_name +
-      " on " +
-      os_name +
-      " " +
-      os_version;
-    console.log(runtime_name);
+function initSlideShow(slideshow) {
 
-    const answerElement = document.querySelector("#answer");
-    const isEnabled = detectiOSARQuickLook();
+	var slides = document.querySelectorAll(`#${slideshow.id} [role="list"] .slide`);
 
-    if (!isEnabled) {
-      hideAppleAR();
-    }
+	var index = 0, time = 2000;
+	slides[index].classList.add('active');
 
-    console.log(isEnabled);
-    answerElement.innerHTML = isEnabled
-      ? runtime_name + " which supports Apple AR"
-      : "🚫 " +
-        runtime_name +
-        " which does not support Apple AR (only works on iPhone with iOS 13 above). Please use Styly AR instead.";
-    answerElement.style.color = isEnabled ? "white" : "white";
+	setInterval( () => {
+		slides[index].classList.remove('active');
+		
+		index++;
+		if (index === slides.length) index = 0;
+
+		slides[index].classList.add('active');
+
+	}, time);
+}
+
   </script>
 </html>
