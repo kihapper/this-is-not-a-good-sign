@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>This is not a good sign</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://unpkg.com/bowser@2.4.0/es5.js"></script>
+    <script src="./script.js"></script>
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+    <div id="logo">
+      <a href="./index.html">
+        THIS IS NOT <br />
+        A GOOD SIGN
+      </a>
+    </div>
+
+    <div id="instagram">
+      <a href="https://www.instagram.com/world.collider/" target="_blank">
+        <img
+          width="35px"
+          src="https://cdn.glitch.com/12e8d23e-5a09-41e4-8be1-39d7a1f7d631%2Fwhite-instagram-icon.png?v=1605305393668"
+        />
+      </a>
+    </div>
+
+    <div id="main_section">
+      <div id="answer">...</div>
+
+      <div class="section_building">
+<!------------One AR------------>
+        <div class="main_container">
+          <img
+            class="thumbnail"
+            src="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2Fnot_good_sign.png?v=1635230262866"
+          />
+
+          <div class="title_box">
+            <div class="main_title">This is not a good sign</div>
+            <div class="AR_option_box">
+              <a
+                class="AppleAR"
+                href="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2Fnot_good_sign.usdz?v=1635230358952"
+                rel="ar"
+              >
+                <img src="" alt="" width="0" height="0" />
+                <span>Apple AR → </span>
+              </a>
+            </div>
+          </div>
+        </div>
+<!------------One AR------------>
+        <div class="main_container">
+          <img
+            class="thumbnail"
+            src="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2Frain.png?v=1635230260805"
+          />
+
+          <div class="title_box">
+            <div class="main_title">It's still raining</div>
+            <div class="AR_option_box">
+              <a
+                class="AppleAR"
+                href="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2Frain_straight.usdz?v=1635230363128"
+                rel="ar"
+              >
+                <img src="" alt="" width="0" height="0" />
+                <span>Apple AR → </span>
+              </a>
+            </div>
+          </div>
+        </div>
+<!------------One AR------------>
+        <div class="main_container">
+          <img
+            class="thumbnail"
+            src="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2Fskyblue.png?v=1635230258973"
+          />
+
+          <div class="title_box">
+            <div class="main_title">Has the sky always been so blue?</div>
+            <div class="AR_option_box">
+              <a
+                class="AppleAR"
+                href="https://cdn.glitch.me/a67505cd-941c-4082-abf5-9bfe8a0fc5b2%2FSky_So_Blue.usdz?v=1635230361735"
+                rel="ar"
+              >
+                <img src="" alt="" width="0" height="0" />
+                <span>Apple AR → </span>
+              </a>
+            </div>
+          </div>
+        </div>
+<!------------One AR------------>    
+        
+        <br>
+        </br>
+      <br>
+      </br>
+    <br>
+    <br>
+        
+      </div>
+      
+    </div>
+
+    <div class="---------------------------">
+      <div id="left"></div>
+      <div id="right"></div>
+      <div id="top"></div>
+      <div id="bottom"></div>
+    </div>
+
+    <div class="footer">
+      <a class="footer_menu left" href="./about.html">About</a>
+    </div>
+
+    <script src="/script.js" defer></script>
+  </body>
+
+  <script type="text/javascript">
+    let current_browser = returnBrowserName();
+
+    let os_name = bowser_result.parsedResult.os.name;
+    let os_version = bowser_result.parsedResult.os.version;
+    let browser_name = bowser_result.parsedResult.browser.name;
+
+    let runtime_name =
+      "Your device is running " +
+      browser_name +
+      " on " +
+      os_name +
+      " " +
+      os_version;
+    console.log(runtime_name);
+
+    const answerElement = document.querySelector("#answer");
+    const isEnabled = detectiOSARQuickLook();
+
+    if (!isEnabled) {
+      hideAppleAR();
+    }
+
+    console.log(isEnabled);
+    answerElement.innerHTML = isEnabled
+      ? runtime_name + " which supports Apple AR"
+      : "🚫 " +
+        runtime_name +
+        " which does not support Apple AR (only works on iPhone with iOS 13 above). Please use Styly AR instead.";
+    answerElement.style.color = isEnabled ? "white" : "white";
+  </script>
+</html>

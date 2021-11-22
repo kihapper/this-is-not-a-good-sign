@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QL IOS TEST</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://unpkg.com/@google/model-viewer@0.6.0/dist/model-viewer.js"></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/@google/model-viewer@0.6.0/dist/model-viewer-legacy.js"
+    ></script>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <p>
+      <span>(<code>#applePayButtonType=plain</code>)</span>
+      <a
+          href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#applePayButtonType=plain"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+    
+    <p>
+      <span>(<code>#custom=https://test-ios-quicklook-js.glitch.me/custom-pay-button.html</code>)</span>
+      <a
+          href="https://cdn.glitch.com/67347000-30bd-4407-b939-2b27f2137e0b%2Flogo-3m-scaled%20(4).usdz?v=1581455657385#custom=https://test-ios-quicklook-js.glitch.me/custom-pay-button.html"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+    
+    <p>
+      <span>(<code>#applePayButtonType=buy</code> with custom values)</span>
+      <a
+        href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#applePayButtonType=buy&checkoutTitle=Cwervo%20Logo&checkoutSubtitle=3D%20logo&price=$0"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <hr />
+    <p>
+      <span> Use <code>applyPayButtonType</code> in the <code>model-viewer</code> <code>ios-src</code></span>
+      <model-viewer
+        ar
+        src="https://cwervo.com/assets/3D-models/logo.glb"
+        ios-src="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#applePayButtonType=buy&checkoutTitle=Cwervo%20Logo&checkoutSubtitle=3D%20logo&price=$0"
+        auto-rotate
+        camera-controls
+        background-color="papayawhip"
+        alt="Spinning AC logo"
+        quick-look-browsers="safari chrome"
+      >
+      </model-viewer>
+    </p>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>

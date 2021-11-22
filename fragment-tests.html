@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>QL IOS TEST</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <script src="https://unpkg.com/@google/model-viewer@0.6.0/dist/model-viewer.js"></script>
+    <script
+      nomodule=""
+      src="https://unpkg.com/@google/model-viewer@0.6.0/dist/model-viewer-legacy.js"
+    ></script>
+
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <p>
+      <span>Scaling off (<code>#allowsContentScaling=0</code>)</span>
+      <a
+        href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#allowsContentScaling=0"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <p>
+      <span>Scaling on (<code>#allowsContentScaling=1</code>)</span>
+      <a
+        href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#allowsContentScaling=1"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <p>
+      <span
+        >Scaling on implicityly (no <code>#allowsContentScaling</code>)</span
+      >
+      <a
+        href="https://cwervo-assets.netlify.com/models/cwervo/logo-3m-scaled.usdz#allowsContentScaling=1"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <hr />
+
+    <p>
+      <span
+        >Disallow scaling AND set a canonical web page URL
+        (<code>#allowsContentScaling=0<em>&</em>canonicalWebPageURL=https://cwervo.com</code>)</span
+      >
+      <a
+        href="http://cwervo.com/assets/3D-models/logo-3m-scaled.usdz#allowsContentScaling=0&canonicalWebPageURL=https://cwervo.com"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <hr />
+    <p>
+      <span
+        >Just setting the canonical web page URL
+        (<code>#canonicalWebPageURL=https://cwervo.com</code>)</span
+      >
+      <a
+        href="http://cwervo.com/assets/3D-models/logo-3m-scaled.usdz#canonicalWebPageURL=https://cwervo.com"
+        rel="ar"
+      >
+        <img src="https://source.unsplash.com/random/200x200" />
+      </a>
+    </p>
+
+    <hr />
+    <p>
+      <span
+        >Try to disallow scaling AND set a canonical web page URL
+        (<code>#allowsContentScaling=0<em>&</em>canonicalWebPageURL=https://cwervo.com</code>)
+        <code>&lt;model-viewer&gt;</code>using</span
+      >
+      <model-viewer
+        ar
+        src="https://cwervo.com/assets/3D-models/logo.glb"
+        ios-src="http://cwervo.com/assets/3D-models/logo-3m-scaled.usdz#allowsContentScaling=0&canonicalWebPageURL=https://cwervo.com"
+        auto-rotate
+        camera-controls
+        background-color="papayawhip"
+        alt="Spinning AC logo"
+        quick-look-browsers="safari chrome"
+      >
+      </model-viewer>
+    </p>
+
+    <script src="/script.js" defer></script>
+  </body>
+</html>
