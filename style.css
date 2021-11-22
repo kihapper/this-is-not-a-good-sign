@@ -74,9 +74,10 @@ body {
 
 #main_section {
   position: relative;
-  width: 80%;
+  max-width: 500px;
   padding: 20px;
   margin: auto;
+  margin-bottom: 200px;
   align-self: center;
 }
 
