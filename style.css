@@ -12,7 +12,7 @@ body {
 
 p,li,ol {
   line-height: 155.8%;
-  font-size: 20px;
+  font-size: 19px;
 }
 
 .footer {
@@ -248,6 +248,7 @@ model-viewer {
 }
 
 .ar_description{
+  padding: 20px;
   margin-top: 15px;
   text-align: center;
   line-height: 135.8%;
