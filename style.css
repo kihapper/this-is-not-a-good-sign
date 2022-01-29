@@ -224,6 +224,7 @@ model-viewer {
   display: flex;
   justify-content: center;
   margin-top: 10px;
+  min-height: 550px;
 }
 
 #title_text{
@@ -257,12 +258,15 @@ model-viewer {
 }
 
 .image_slide{
-  width: 600px;
+  width: 900px;
 }
 
 @media only screen and (max-width: 600px) {
   .image_slide{
-    width: 350px;
+    width: 100%;
+  }
+  #slideshow-example {
+    min-height: 250px;
   }
   #title_text{
     margin-top: 48px;
