@@ -133,6 +133,10 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: green;
+}
+
 .section_building {
   display: flex;
   flex-direction: row;
