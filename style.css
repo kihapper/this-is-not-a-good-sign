@@ -15,6 +15,9 @@ p,li,ol {
   font-size: 19px;
 }
 
+h2{
+  font-weight: normal;
+}
 
 .footer {
   display: flex;
