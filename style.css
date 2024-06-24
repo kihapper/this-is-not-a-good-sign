@@ -245,6 +245,27 @@ model-viewer {
   font-size: 24px;
 }
 
+
+#ar_section{
+  padding: 20px;
+  animation: fadeIn ease-in 3s;
+  -webkit-animation: fadeIn ease-in 3s;
+  -moz-animation: fadeIn ease-in 3s;
+  -o-animation: fadeIn ease-in 3s;
+  -ms-animation: fadeIn ease-in 3s;
+}
+
+.ar-android-container{
+  max-width: 380px;
+  border: 2px solid white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  margin-bottom: 110px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .ar_heading{
   margin-top: 20px;
   text-align: center;
@@ -263,6 +284,11 @@ model-viewer {
 
 .image_slide{
   width: 900px;
+}
+
+.image_gallery{
+  width: 100%;
+  margin-bottom: 40px;
 }
 
 @media only screen and (max-width: 600px) {
